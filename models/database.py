@@ -12,7 +12,7 @@ engine = create_engine(URL_DATABSE)
 # Probar la conexión
 try:
     connection = engine.connect()
-    print("Conexión exitosa a la base de datos")
+    print("Conexión exitosa a la base de datos remota")
     connection.close()
 except Exception as e:
     print(f"Error al conectar a la base de datos: {e}")

@@ -53,7 +53,7 @@ app.include_router(tbb_aprobaciones)
 app.include_router(bitacora)
 
 # Configurar el directorio de archivos estáticos
-app.mount("/uploads", StaticFiles(directory="uploads"), name="uploads")
+app.mount("/uploads", StaticFiles(directory="uploads", html=False), name="uploads")
 
 # Mensaje de bienvenida usando logging
 logging.basicConfig(level=logging.INFO)

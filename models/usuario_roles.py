@@ -3,8 +3,6 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from config.db import Base
 
-from models.tbb_usuarios import tbb_usuarios  # Importa el modelo tbb_usuarios
-from models.roles import Roles  # Importa el modelo Roles
 
 class UsuarioRoles(Base):
     __tablename__ = 'tbd_usuarios_roles'

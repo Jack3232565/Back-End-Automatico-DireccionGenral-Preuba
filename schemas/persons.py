@@ -31,3 +31,4 @@ class Person(PersonBase):
 
     class Config:
         from_attributes = True
+        

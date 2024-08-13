@@ -31,4 +31,3 @@ class Aprobaciones(Base):
 
     personal_medico = relationship("TbbPersonalMedico", back_populates="aprobaciones")
     solicitudes = relationship("TbdSolicitudes", back_populates="aprobaciones")
-    

@@ -33,8 +33,8 @@ def create_usuario_roles(db: Session, usuario_roles: schemas_usuario_roles.Usuar
 def update_usuario_roles(db: Session, usuario_id: int, rol_id: int, usuario_roles: schemas_usuario_roles.Usuario_RolesUpdate):
     # Buscar el registro existente
     db_usuario_role = db.query(models_usuario_roles.UsuarioRoles).filter(
-        models_usuario_roles.UsuarioRoles.Usuario_ID == usuario_id,
-        models_usuario_roles.UsuarioRoles.Rol_ID == rol_id
+        # models_usuario_roles.UsuarioRoles.Usuario_ID == usuario_id,
+        # models_usuario_roles.UsuarioRoles.Rol_ID == rol_id
     ).first()
     
     if not db_usuario_role:

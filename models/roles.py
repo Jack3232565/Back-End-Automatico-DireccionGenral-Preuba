@@ -9,10 +9,17 @@ class Roles(Base):
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     Nombre = Column(String(50), nullable=False)
     Descripcion = Column(Text)
-    Estatus = Column(Boolean, default=True)
+    Estatus = Column(Integer, default=1)  # Almacenará 1 (equivalente a b'1') o 0 (equivalente a b'0')
     Fecha_Registro = Column(DateTime, nullable=False, server_default=func.now())
     Fecha_Actualizacion = Column(DateTime, onupdate=func.now())
 
+    @property
+    def estatus(self):
+        return self.Estatus == 1
+
+    @estatus.setter
+    def estatus(self, value):
+        self.Estatus = 1 if value else 0
+
 
     usuarios = relationship("UsuarioRoles", back_populates="rol")
-    

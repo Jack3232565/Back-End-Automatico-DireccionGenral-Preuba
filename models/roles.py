@@ -23,3 +23,4 @@ class Roles(Base):
 
 
     usuarios = relationship("UsuarioRoles", back_populates="rol")
+    
